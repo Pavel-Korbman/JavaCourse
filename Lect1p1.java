@@ -1,10 +1,10 @@
 /**
  * Lect1
  */
-public class Lect1 {   // Снипет class
+public class Lect1p1 {   // Снипет class
     public static void main(String[] args) {  //  Снипет main
         // System.out.println("hello world");  //  Снипет sysout
-        String s ;  //  Объявление переменной
+        //String s ;  //  Объявление переменной
         //s = "Привет";  //  Инициализация переменной. Нужно всегда
         // int number; 
         // number = 777;
