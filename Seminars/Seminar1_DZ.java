@@ -1,4 +1,4 @@
-public class Seminar1 {
+public class Seminar1_DZ {
     public static void main(String[] args) {     
         //System.out.println(countNTriangle(0));
         // printPrimeNums();
