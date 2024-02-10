@@ -60,12 +60,12 @@ public class Lect1p2 {
          
         // Области видимости переменных:
             {
-                int i = 777;           
-                System.out.println(i);  
+                int i1 = 777;           
+                System.out.println(i1);  
             }
             
-        int i = 123;         
-        System.out.println(i);
+        int i1 = 123;         
+        System.out.println(i1);
 
         // ФУНКЦИИ И МЕТОДЫ:
 
@@ -78,6 +78,135 @@ public class Lect1p2 {
         lib1.sayHiru();
         System.out.println(lib1.sum(700, 77));
         System.out.println(lib1.factor(4));
+
+        // УПРАВЛЯЮЩИЕ КОНСТРУКЦИИ:
+        
+        // Условный оператор:
+        
+        int a4 = 1;        
+        int b4 = 22;        
+        int c4;        
+        if (a4 > b4) {            
+            c4 = a4;        
+        } else {            
+            c4 = b4;        
+        }        
+        
+        System.out.println(c4);
+
+        int a5 = 100;        
+        int b5 = 200;        
+        int c5 = 0;
+        if (a5>b5) c5 = a5;
+        if (b5>a5) c5 = b5;
+
+        System.out.println(c5);
+
+
+        // Тернарный оператор:
+
+        int a6 = 10;        
+        int b6 = 22;        
+        int min = a6 < b6 ? a6 : b6;        
+        
+        System.out.println(min);
+
+
+        // Оператор выбора:
+
+        int mounth = 5;        
+        String text = "";        
+        switch (mounth) { 
+            case 1:
+            case 2:
+            case 3:
+            case 4:           
+            case 5:                
+                text = "Autumn";                
+                break;           
+            case 777: text = "mistake";
+                break;              
+            // default:                
+            //     text = "по умолчанию";                
+            //     break;        
+        }        
+        System.out.println(text);
+        
+        // ЦИКЛЫ:
+
+        // WHILE:
+        int value = 3210;        
+        int count = 0;        
+        while (value != 0) {            
+            value /= 10;            
+            count++;        
+        }        
+        System.out.println(count);
+
+        // DO WHILE:
+        int value1 = 3210;        
+        int count1 = 0;  
+        do {
+            value1 /= 10;            
+            count1++;    
+        } while (value1 != 0);
+        System.out.println(count1);
+
+        // FOR:
+        for (int i = 0; i<10; i++){
+            if (i % 2 ==0)
+                continue;
+            System.out.println(i);   // Печатаем только нечётные
+        }
+
+        int s = 0;        
+        for (int i = 1; i <= 10; i++) {            
+            s += i;        
+        }        
+        System.out.println(s);
+
+        // Вложенные циклы:
+        
+        for (int i = 0; i < 5; i++) {            
+            for (int j = 0; j < 5; j++) {                
+                System.out.print("* ");            
+            }            
+            System.out.println();
+        }
+        /*
+         * * * * *
+         * * * * *
+         * * * * *
+         * * * * *
+         */
+
+        
+         // FOR IN (для коллекций): снипет FOREACH
+        int arr[] = new int[10];        
+        for (int item : arr) {            
+            System.out.printf("%d ", item);        
+        }        
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+            System.out.printf("%d ", arr[i]);
+        }
+
+        
+
+        
+
+
+
+
+
+
+        
+        
+
+
+
 
      
 
