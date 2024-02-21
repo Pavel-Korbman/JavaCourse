@@ -9,9 +9,14 @@ public class Seminar4 {
 
     public static void main(String[] args) {
         //task0();
-        task1();
+        //task1();
+        //task2();
 
         //System.out.println(bookShop);
+
+
+
+       addColl(new String[]{"Раз", "Два", "Три", "Четыре"});
 
     }
      /* Задание №0
