@@ -16,7 +16,7 @@ public class Seminar4 {
 
 
 
-       addColl(new String[]{"Раз", "Два", "Три", "Четыре"});
+       // addColl(new String[]{"Раз", "Два", "Три", "Четыре"});
 
     }
      /* Задание №0
