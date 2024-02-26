@@ -72,6 +72,7 @@ class PhoneBook {
 public class Seminar5_DZ {
 
     public static void main(String[] args) {
+        /* К первой задаче:
         String name1;
         String name2;
         int phone1;
@@ -96,7 +97,7 @@ public class Seminar5_DZ {
 
         System.out.println(myPhoneBook.find(name1));
         System.out.println(PhoneBook.getPhoneBook());
-        System.out.println(myPhoneBook.find("Me"));
+        System.out.println(myPhoneBook.find("Me")); */
 
     }
 
