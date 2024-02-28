@@ -1,3 +1,5 @@
 
 февр. 16, 2024 6:59:20 PM Seminar2 ToFile
 INFO: \\sem2test.txt (Указан недопустимый путь)
+февр. 16, 2024 7:07:09 PM Seminar2 ToFile
+INFO: \\sem2test.txt (Указан недопустимый путь)
