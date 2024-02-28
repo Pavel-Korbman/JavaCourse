@@ -1,15 +1,60 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+/*
+Реализуйте структуру телефонной книги с помощью HashMap.
+Программа также должна учитывать,
+что в во входной структуре будут повторяющиеся имена с разными телефонами,
+их необходимо считать, как одного человека с разными телефонами.
+Вывод должен быть отсортирован по убыванию числа телефонов.
+ */
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+import java.util.*;
+
+public class Main {
+    static Map<String, List<String>> phoneBook = new HashMap<>();
+
+    public static void main(String[] args) {
+        add("Билл Гейтс", "1234568");
+        add("Стив Возняк", "9990333");
+        add("Билл Гейтс", "1234567");
+        add("Илон Маск", "7890111");
+        add("Илон Маск", "7890110");
+        add("Марк Цукерберг", "9990125");
+        add("Илон Маск", "7890112");
+        add("Билл Гейтс", "1234569");
+        add("Стив Возняк", "9990443");
+        add("Павел", "01");
+        add("Павел", "02");
+        add("Павел", "022");
+        add("Павел", "03");
+        add("Павел", "00");
+
+        printAll(phoneBook);
+        find("Марк Цукерберг");
     }
+
+    static void add(String name, String phone) {
+        ArrayList<String> phoneS = new ArrayList<>();
+        if (!phoneBook.containsKey(name)) {
+            phoneS.add(phone);
+        } else {
+            phoneS.addAll(phoneBook.get(name));
+            phoneS.add(phone);
+        }
+        phoneBook.put(name, phoneS);
+    }
+
+    static void printAll(Map<String, List<String>> Col) {
+        TreeMap<String, String> treeMap = new TreeMap<>();
+        for (var item : phoneBook.entrySet()) {
+            int index = item.getValue().size();
+            treeMap.put(index + item.getKey(), item.getKey() + "=" + item.getValue());
+        }
+        System.out.println(treeMap.descendingMap().values().toString());
+    }
+
+    static void find(String name) {
+        if (phoneBook.containsKey(name)) System.out.println(name + "=" + phoneBook.get(name));
+        else System.out.println(name + " - такого имени нет в телефонной книге");
+
+    }
+
 }
