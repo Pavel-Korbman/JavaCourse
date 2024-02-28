@@ -45,16 +45,14 @@ public class Main {
     static void printAll(Map<String, List<String>> Col) {
         TreeMap<String, String> treeMap = new TreeMap<>();
         for (var item : phoneBook.entrySet()) {
-            int index = item.getValue().size();
-            treeMap.put(index + item.getKey(), item.getKey() + "=" + item.getValue());
+            treeMap.put(item.getValue().size() + item.getKey(), item.getKey() + "=" + item.getValue());
         }
-        System.out.println(treeMap.descendingMap().values().toString());
+        System.out.println(treeMap.descendingMap().values());
     }
 
     static void find(String name) {
         if (phoneBook.containsKey(name)) System.out.println(name + "=" + phoneBook.get(name));
         else System.out.println(name + " - такого имени нет в телефонной книге");
-
     }
 
 }
