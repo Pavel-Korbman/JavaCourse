@@ -1,9 +1,10 @@
 package Seminars;
 // МНОЖЕСТВО КОЛЛЕКЦИЙ SET
 
-import java.lang.reflect.Array;
-import java.util.*;
 
+
+import java.util.*;
+import Cat;
 
 public class Seminar6 {
 
@@ -11,13 +12,26 @@ public class Seminar6 {
     public static void main(String[] args) {
 
 //        task0();
+//        Integer[] array = createArr(1000, 0, 24);
+//        //System.out.println(Arrays.toString(array));
+//        System.out.println(task1(array));
 
-        Integer[] array = createArr(1000, 0, 24);
-        //System.out.println(Arrays.toString(array));
-        System.out.println(task1(array));
+        /* Задание №2
+    1. Продумайте структуру класса Кот.
+    Какие поля и методы будут актуальны для приложения, которое является
+    а) информационной системой ветеринарной клиники
+    б) архивом выставки котов
+    в) информационной системой Театра кошек Ю. Д. Куклачёва
+    Можно записать в текстовом виде, не обязательно реализовывать в java.
+    2. Реализуйте 1 из вариантов класса Cat, можно использовать не все придуманные поля и методы.
+    Создайте несколько экземпляров этого класса, выведите их в консоль.
+    3. Добейтесь того, чтобы при выводе в консоль объекта типа Cat,
+    выводилась его кличка, цвет и возраст (или другие параметры на ваше усмотрение).*/
+        Cat cat1 = new Cat();
+        System.out.println(cat1);
+
+
     }
-
-
     /* Задание №0
 1. Создайте HashSet, заполните его следующими числами: {1, 2, 3, 2, 4, 5, 6, 3}.
 Распечатайте содержимое данного множества.
@@ -26,6 +40,7 @@ public class Seminar6 {
 3. Создайте TreeSet, заполните его следующими числами: {1, 2, 3, 2, 4, 5, 6, 3}.
 Распечатайте содержимое данного множества.
         */
+
     static void task0() {
         Integer[] arr = {2, 9, 3, 8, 1, 2, 3, 8};
         String[] str = {"abvfffff", "bvm", "mvff", "avaaak"};
@@ -61,7 +76,7 @@ public class Seminar6 {
           */
     static Integer[] createArr(int n, int min, int max) {
         Integer[] arr = new Integer[n];
-        for (int i = 0; i <n; i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = new Random().nextInt(min, max + 1);
         }
         return arr;
@@ -71,10 +86,6 @@ public class Seminar6 {
         var set = new HashSet<>(Arrays.asList(arr));
         return (double) (set.size() * 100.0 / arr.length);
     }
-
-
-
-    /* Задание №2*/
 
 }
 
